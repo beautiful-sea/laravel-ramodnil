@@ -15,7 +15,7 @@ class Install extends Command
      *
      * @var string
      */
-    protected $signature = 'boiler:install';
+    protected $signature = 'ramodnil:install';
 
     /**
      * The console command description.
@@ -119,6 +119,7 @@ class Install extends Command
 
     public function setStyles() {
         File::copyDirectory(self::SOURCES_PATH . '/resources/sass', self::ROOT_PATH . '/resources/sass');
+        File::copyDirectory(self::SOURCES_PATH . '/public/css', self::ROOT_PATH . '/public/css');
     }
 
     public function setScripts() {        
@@ -127,6 +128,7 @@ class Install extends Command
         exec($command);
 
         File::copyDirectory(self::SOURCES_PATH . '/resources/js', self::ROOT_PATH . '/resources/js');
+        File::copyDirectory(self::SOURCES_PATH . '/public/js', self::ROOT_PATH . '/public/js');
 
         $bootstrapJsFile = self::ROOT_PATH . '/resources/js/bootstrap.js';
         $requireCommand = "require('./ramodnil');";

@@ -3,7 +3,7 @@
 @section('header-title')
     <h1>
         Usuários
-        <small>Ciar</small>
+        <small>Criar</small>
     </h1>
 @stop
 
