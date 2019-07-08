@@ -1,5 +1,4 @@
 require('bootstrap');
-require('admin-lte');
 require('jquery-validation');
 require('jquery-validation/dist/additional-methods');
 require('datatables.net-bs4');
@@ -15,7 +14,7 @@ window.moment = require('moment');
 window.numeral = require('numeral');
 window.Chart = require('chart.js');
 
-require('./i18n/boilerplate/pt-br');
+require('./i18n/ramodnil/pt-br');
 
 $('form').each((index, form) => {
     if (!$(form).hasClass('without-spinner')) {

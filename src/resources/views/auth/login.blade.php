@@ -1,13 +1,11 @@
 @extends('ramodnil.raw')
 
 @section('content')
-    <div class="login-box">
-        <div class="login-logo">
-            <b>Laravel</b> Ramodnil
-        </div>
+<div class="login">
+    <div class="wrapper wrapper-login">
 
-        <div class="card">
-            <div class="card-body login-card-body">
+        <div class="container container-login animated fadeIn">
+            <div class="login-form">
                 @if (\App\User::first())
                     {{ Form::open(['url' => route('login')]) }}
 
@@ -72,6 +70,7 @@
             </div>
         </div>
     </div>
+</div>
 @endsection
 
 @section('js')

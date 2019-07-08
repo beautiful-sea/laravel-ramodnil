@@ -1,6 +1,6 @@
 <?php
 
-namespace AgenciaMaior\Laravelramodnil\Commands;
+namespace BeautifulSea\Laravelramodnil\Commands;
 
 use Illuminate\Console\Command;
 use File;
