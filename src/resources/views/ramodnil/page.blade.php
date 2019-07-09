@@ -6,11 +6,11 @@
 
 @section('body')
 <div class="wrapper">
-    <div class="main-header" data-background-color="purple">
+    <div class="main-header" data-background-color="blue">
         <!-- Logo Header -->
         <div class="logo-header">
 
-            <span class="page-title" style="margin-bottom: 0px"><b>Painel</b> Admin</span>
+            <span class="page-title logo" style="padding-top: 20px!important; color: white"><b>Painel</b> Admin</span>
             <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
                     <i class="fa fa-bars"></i>
@@ -48,83 +48,13 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown hidden-caret">
-                        <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-envelope"></i>
-                        </a>
-                        <ul class="dropdown-menu messages-notif-box animated fadeIn" aria-labelledby="messageDropdown">
-                            <li>
-                                <div class="dropdown-title d-flex justify-content-between align-items-center">
-                                    Messages                                    
-                                    <a href="#" class="small">Mark all as read</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="message-notif-scroll scrollbar-outer">
-                                    <div class="notif-center">
-                                        <a href="#">
-                                            <div class="notif-img"> 
-                                                <img src="#" alt="Img Perfil">
-                                            </div>
-                                            <div class="notif-content">
-                                                <span class="subject">Jimmy Denis</span>
-                                                <span class="block">
-                                                    How are you ?
-                                                </span>
-                                                <span class="time">5 minutes ago</span> 
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="notif-img"> 
-                                                <img src="#" alt="Img Perfil">
-                                            </div>
-                                            <div class="notif-content">
-                                                <span class="subject">Chad</span>
-                                                <span class="block">
-                                                    Ok, Thanks !
-                                                </span>
-                                                <span class="time">12 minutes ago</span> 
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="notif-img"> 
-                                                <img src="#" alt="Img Perfil">
-                                            </div>
-                                            <div class="notif-content">
-                                                <span class="subject">Jhon Doe</span>
-                                                <span class="block">
-                                                    Ready for the meeting today...
-                                                </span>
-                                                <span class="time">12 minutes ago</span> 
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="notif-img"> 
-                                                <img src="#" alt="Img Perfil">
-                                            </div>
-                                            <div class="notif-content">
-                                                <span class="subject">Talha</span>
-                                                <span class="block">
-                                                    Hi, Apa Kabar ?
-                                                </span>
-                                                <span class="time">17 minutes ago</span> 
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="see-all" href="javascript:void(0);">See all messages<i class="fa fa-angle-right"></i> </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown hidden-caret">
                         <a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-bell"></i>
-                            <span class="notification">4</span>
+                            <span class="notification">1</span>
                         </a>
                         <ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">
                             <li>
-                                <div class="dropdown-title">You have 4 new notification</div>
+                                <div class="dropdown-title">Você tem 1 nova notificação</div>
                             </li>
                             <li>
                                 <div class="notif-scroll scrollbar-outer">
@@ -133,45 +63,16 @@
                                             <div class="notif-icon notif-primary"> <i class="fa fa-user-plus"></i> </div>
                                             <div class="notif-content">
                                                 <span class="block">
-                                                    New user registered
+                                                    Novo usuário cadastrado
                                                 </span>
-                                                <span class="time">5 minutes ago</span> 
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="notif-icon notif-success"> <i class="fa fa-comment"></i> </div>
-                                            <div class="notif-content">
-                                                <span class="block">
-                                                    Rahmad commented on Admin
-                                                </span>
-                                                <span class="time">12 minutes ago</span> 
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="notif-img"> 
-                                                <img src="#" alt="Img Perfil">
-                                            </div>
-                                            <div class="notif-content">
-                                                <span class="block">
-                                                    Reza send messages to you
-                                                </span>
-                                                <span class="time">12 minutes ago</span> 
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="notif-icon notif-danger"> <i class="fa fa-heart"></i> </div>
-                                            <div class="notif-content">
-                                                <span class="block">
-                                                    Farrah liked Admin
-                                                </span>
-                                                <span class="time">17 minutes ago</span> 
+                                                <span class="time">5 minutes atrás</span> 
                                             </div>
                                         </a>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <a class="see-all" href="javascript:void(0);">See all notifications<i class="fa fa-angle-right"></i> </a>
+                                <a class="see-all" href="javascript:void(0);">Ver todas notificações<i class="fa fa-angle-right"></i> </a>
                             </li>
                         </ul>
                     </li>
@@ -187,17 +88,16 @@
                                     <div class="avatar-lg">{!!Auth::user()->avatar!!}</div>
                                     <div class="u-text">
                                         <h4>{{Auth::user()->name}}</h4>
-                                        <p class="text-muted">{{Auth::user()->email}}</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">Ver Perfil</a>
+                                        <p class="text-muted">{{Auth::user()->email}}</p>
+                                        <!-- <a href="profile.html" class="btn btn-rounded btn-danger btn-sm">Ver Perfil</a> -->
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Meu Perfil</a>
+                                <a class="dropdown-item" href="{{route('users.profile')}}">Meu Perfil</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Configurações da Conta</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Sair</a>
+                                <a class="dropdown-item" href="{{route('logout')}}">Sair</a>
                             </li>
                         </ul>
                     </li>
@@ -229,18 +129,8 @@
                         <div class="collapse in" id="collapseExample">
                             <ul class="nav">
                                 <li>
-                                    <a href="#profile">
+                                    <a href="{{route('users.profile')}}">
                                         <span class="link-collapse">Meu Perfil</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#edit">
-                                        <span class="link-collapse">Editar Perfil</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#settings">
-                                        <span class="link-collapse">Configurações</span>
                                     </a>
                                 </li>
                             </ul>
@@ -261,6 +151,30 @@
         <div class="content">
             <div class="page-inner">
                 @yield('header-title')
+
+                <!-- Main -->
+                <section class="content">
+                    @if(Session::has('flash.success'))
+                    <div class="alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                        {{ Session::get('flash.success') }}
+                    </div>
+                    @endif
+
+                    @if(Session::has('flash.error'))
+                    <div class="alert alert-error">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                        {{ Session::get('flash.error') }}
+                    </div>
+                    @endif
+                </section>
+
                 @yield('content')
             </div>
         </div>
@@ -286,28 +200,6 @@
             </div>
         </div>
         
-        <!-- Main -->
-        <section class="content">
-            @if(Session::has('flash.success'))
-            <div class="alert alert-success">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-
-                {{ Session::get('flash.success') }}
-            </div>
-            @endif
-
-            @if(Session::has('flash.error'))
-            <div class="alert alert-error">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-
-                {{ Session::get('flash.error') }}
-            </div>
-            @endif
-        </section>
     </div>
 
     <!-- Footer -->

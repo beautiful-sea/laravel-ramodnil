@@ -35,7 +35,7 @@ class User extends Authenticatable
         if ($this->avatar_extension) {
             $image = sprintf('/files/users/%s.%s', $this->id, $this->avatar_extension);
 
-            return '<img src="' . $image . '" class="avatar-img rounded-circle">';
+            return '<img src="' . $image . '" class="avatar-img avatar-sm float-left mr-2 elevation-5 rounded-circle">';
         } else {
             $buffer = explode(' ', $this->name);
             $initials = '';

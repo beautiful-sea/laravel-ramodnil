@@ -40,6 +40,7 @@ class LaravelRamodnilServiceProvider extends ServiceProvider
             Route::get('/block/{user}', 'UsersController@block')->name('users.block');
             Route::get('/unblock/{user}', 'UsersController@unblock')->name('users.unblock');
         });
+        Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
         Route::resource('/users', 'UsersController');
     }
 }

@@ -10,7 +10,7 @@
 
 	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/azzara.min.css') }}">
-
+	<link rel="stylesheet" href="{{asset('fonts/flaticon/flaticon.css')}}">
 	@yield('adminlte_css')
 </head>
 
