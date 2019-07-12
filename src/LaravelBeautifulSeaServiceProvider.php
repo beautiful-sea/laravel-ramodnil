@@ -42,5 +42,9 @@ class LaravelRamodnilServiceProvider extends ServiceProvider
         });
         Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
         Route::resource('/users', 'UsersController');
+
+        Route::get('/markAsRead', function(){
+            auth()->user()->unreadNotifications->markAsRead();
+        });
     }
 }

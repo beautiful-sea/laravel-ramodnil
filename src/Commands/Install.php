@@ -63,6 +63,8 @@ class Install extends Command
 
         $this->setNotifications();
 
+        $this->copyFonts();
+
         $this->setACL();
 
         $this->setRoutes();
@@ -114,7 +116,7 @@ class Install extends Command
 
     public function makeNotification(){
 
-        $command = 'php artisan notifications:table --force';
+        $command = 'php artisan notifications:table';
 
         echo "$command \n";
 
@@ -123,6 +125,10 @@ class Install extends Command
 
     public function copyMigrations() {
         File::copyDirectory(self::SOURCES_PATH . '/migrations', self::ROOT_PATH . '/database/migrations');
+    }
+
+    public function copyFonts() {
+        File::copyDirectory(self::SOURCES_PATH . '/public/fonts', self::ROOT_PATH . '/public/fonts');
     }
 
     public function setACL() {

@@ -62,9 +62,14 @@ class UsersController extends Controller
 
         $user->password = Hash::make($request->password);
 
-        auth()->user()->notify(new CreatedUser());
-
         $user->save();
+
+        $allAdmins = User::all()->where('role',0);
+
+        foreach ($allAdmins as $user) {
+            $user->notify(new CreatedUser($user,auth()->user()));
+        }
+
 
         return redirect()->route('users.index')->with('flash.success', 'Usuário salvo com sucesso');
     }

@@ -52,7 +52,7 @@
                     $countNotifications = count(auth()->user()->unreadNotifications);
 
                     @endphp
-                    <li class="nav-item dropdown hidden-caret">
+                    <li class="nav-item dropdown hidden-caret" id="markAsRead" >
                         <a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-bell"></i>
                             @if($countNotifications > 0)
@@ -72,15 +72,7 @@
                             <li>
                                 <div class="notif-scroll scrollbar-outer">
                                     <div class="notif-center">
-                                        <a href="#">
-                                            <div class="notif-icon notif-primary"> <i class="fa fa-user-plus"></i> </div>
-                                            <div class="notif-content">
-                                                <span class="block">
-                                                    Novo usuário cadastrado
-                                                </span>
-                                                <span class="time"> {{$notification->created_at}}</span> 
-                                            </div>
-                                        </a>
+                                        @include('layouts.partials.notification.'.snake_case(class_basename($notification->type)))
                                     </div>
                                 </div>
                             </li>

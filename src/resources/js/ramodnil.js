@@ -242,3 +242,9 @@ function validateCnpj(cnpj) {
         return true;
     }
 }
+
+$(function(){
+    $('#markAsRead').click(function(){
+        $.get('/markAsRead');
+    });
+})
