@@ -90,7 +90,7 @@ Route::get('/', function() {
 ```php
 Route::get('/', 'HomeController@index')->name('home');
 
-\AgenciaMaior\LaravelBoilerplate\LaravelBoilerplateServiceProvider::routes();
+\BeautifulSea\LaravelRamodnil\LaravelRamodnilServiceProvider::routes();
 ```
 
 A instalação adiciona automaticamente suas próprias rotas. Na seção [Rotas](#routes) dentro desse documento, você pode saber como sobrescrever essas rotas.
@@ -219,7 +219,7 @@ Os estilos e scripts específicos por página podem ser colocados em suas respec
 
 ### <a name="menu"></a> Menu
 
-O template do menu se encontra em *resources/boilerplate/main-menu.blade.php*. No começo desse arquivo, duas variáveis são geradas para identificar qual o Controller atual e qual a Action atual, com isso, é possível tornar o menu ativo quando a página estiver aberta no seu respectivo item de menu.
+O template do menu se encontra em *resources/ramodnil/main-menu.blade.php*. No começo desse arquivo, duas variáveis são geradas para identificar qual o Controller atual e qual a Action atual, com isso, é possível tornar o menu ativo quando a página estiver aberta no seu respectivo item de menu.
 
 **Exemplo de um novo item de menu:**
 
