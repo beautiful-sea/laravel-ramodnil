@@ -24,6 +24,8 @@ Biblioteca para gerar um template padrão de um painel administrativo baseado em
     11. [Animação no submit do formulário](#form-spinner)
     12. [Parsers](#parsers)
     13. [Estados Brasileiros](#ufs)
+    14. [Notificações](#notifications)
+    
 4. [Bibliotecas utilizadas](#libraries)
 
 ## <a name="dependencias"></a> Dependências
@@ -649,6 +651,27 @@ const ESTADOS_BRASILEIROS = [
 ```php
 {{ Form::bsSelect('estados', 'Estados', \App\Http\Controller::ESTADOS_BRASILEIROS) }}
 ```
+### <a name="notifications"></a> Notificações
+A biblioteca gera um sistema de notificações inicialmente para criação de usuários, notificando os administradores do painel.
+
+É criado um arquivo em *Notifications/CreatedUser.php*. Esse é o arquivo que cria as notificações.
+
+As notificações são exibidas a partir do arquivo localizado em *resources/views/ramodnil/page.blade.php* como mostrado a seguir:
+```
+@foreach(auth()->user()->unreadNotifications as $notification)
+<li>
+<div class="notif-scroll scrollbar-outer">
+    <div class="notif-center">
+	@include('layouts.partials.notification.'.snake_case(class_basename($notification->type)))
+    </div>
+</div>
+</li>
+@endforeach
+```
+
+*@include('layouts.partials.notification.'.snake_case(class_basename($notification->type)))* tem a função de incluir o arquivo de exibição criado para cada tipo, esses arquivos estão localizados em *resources/views/layouts/partials/notification/*.
+
+Veja mais sobre Notificações na [documentação do Laravel](https://laravel.com/docs/notifications)
 
 ## <a name="libraries"></a> Bibliotecas utilizadas
 
