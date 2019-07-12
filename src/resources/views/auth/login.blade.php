@@ -8,7 +8,7 @@
             <div class="login-form">
                 @if (\App\User::first())
                 {{ Form::open(['url' => route('login')]) }}
-
+                <h3 class="text-center">Laravel Ramodnil</h3>
                 <div class="input-group mb-3">
                     <input type="email" name="email" class="form-control" placeholder="E-mail">
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Hash;
 use Auth;
+use App\Notifications\CreatedUser;
 
 class UsersController extends Controller
 {
@@ -60,6 +61,8 @@ class UsersController extends Controller
         $user->fill($request->all());
 
         $user->password = Hash::make($request->password);
+
+        auth()->user()->notify(new CreatedUser());
 
         $user->save();
 

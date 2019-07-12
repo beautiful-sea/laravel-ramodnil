@@ -51,6 +51,8 @@ class Install extends Command
 
         $this->makeAuth();
 
+        $this->makeNotification();
+
         echo "Copiando arquivos... ";
 
         $this->copyMigrations();
@@ -58,6 +60,8 @@ class Install extends Command
         $this->setModels();
 
         $this->setControllers();
+
+        $this->setNotifications();
 
         $this->setACL();
 
@@ -102,6 +106,15 @@ class Install extends Command
 
     public function makeAuth() {
         $command = 'php artisan make:auth --force';
+
+        echo "$command \n";
+
+        exec($command);
+    }
+
+    public function makeNotification(){
+
+        $command = 'php artisan notifications:table --force';
 
         echo "$command \n";
 
@@ -157,6 +170,10 @@ class Install extends Command
 
     public function setControllers() {
         File::copyDirectory(self::SOURCES_PATH . '/Controllers', self::ROOT_PATH . '/app/Http/Controllers');
+    }
+
+    public function setNotifications(){
+        File::copyDirectory(self::SOURCES_PATH . '/Notifications', self::ROOT_PATH . '/app/Http/Notifications');
     }
 
     public function setTemplates() {

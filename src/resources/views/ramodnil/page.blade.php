@@ -47,15 +47,28 @@
                             <i class="fa fa-search"></i>
                         </a>
                     </li>
+                    @php
+
+                    $countNotifications = count(auth()->user()->unreadNotifications);
+
+                    @endphp
                     <li class="nav-item dropdown hidden-caret">
                         <a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-bell"></i>
-                            <span class="notification">1</span>
+                            @if($countNotifications > 0)
+                                <span class="notification">{{$countNotifications}}</span>
+                            @endif
                         </a>
                         <ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">
+                            
                             <li>
-                                <div class="dropdown-title">Você tem 1 nova notificação</div>
+                                @if($countNotifications > 0)
+                                <div class="dropdown-title">Você tem {{$countNotifications}} {{($countNotifications > 1)?'novas notificações' : 'nova notificação'}}</div>
+                                @else
+                                <div class="dropdown-title">Você não tem novas notificações</div>
+                                @endif
                             </li>
+                            @foreach(auth()->user()->unreadNotifications as $notification)
                             <li>
                                 <div class="notif-scroll scrollbar-outer">
                                     <div class="notif-center">
@@ -65,12 +78,13 @@
                                                 <span class="block">
                                                     Novo usuário cadastrado
                                                 </span>
-                                                <span class="time">5 minutos atrás</span> 
+                                                <span class="time"> {{$notification->created_at}}</span> 
                                             </div>
                                         </a>
                                     </div>
                                 </div>
                             </li>
+                            @endforeach
                             <li>
                                 <a class="see-all" href="javascript:void(0);">Ver todas notificações<i class="fa fa-angle-right"></i> </a>
                             </li>
