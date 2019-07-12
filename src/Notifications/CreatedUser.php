@@ -12,14 +12,19 @@ class CreatedUser extends Notification
 {
     use Queueable;
 
+    private $user;
+
+    private $created_by;
+
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($user,$created_by)
     {
-        //
+        $this->user = $user;
+        $this->created_by = $created_by;
     }
 
     /**
@@ -56,9 +61,8 @@ class CreatedUser extends Notification
     public function toDatabase($notifiable)
     {
         return [
-            'emailUserCreated'  =>$notifiable->email,
-            'nameUserCreated'   =>$notifiable->name,
-            'userCreatedByEmail'     =>auth()->user()->email
+            'userCreated'   =>$this->user,
+            'createdBy'     =>$this->created_by,
         ];
     }
 
