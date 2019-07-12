@@ -8,23 +8,19 @@
 <h1>Início</h1>
 @stop
 
-@section('header-breadcrumbs')
-<li class="breadcrumb-item"><a href="/">Home</a></li>
-<li class="breadcrumb-item active">Dashboard</li>
-@endsection
 
 @section('content')
 
 <div class="row">
 	<div class="col-md-4">
-		<div class="card card-info card-annoucement card-round">
+		<div class="card card-info bg-info-gradient card-annoucement card-round">
 			<div class="card-body text-center">
 				<div class="card-opening">Bem-vindo @php $name = explode(" ",Auth::user()->name); echo $name[0] @endphp,</div>
 				<div class="card-desc">
 					Agora você pode iniciar um projeto e adicionar funcionalidades com muito mais agilidade!
 				</div>
 				<div class="card-detail">
-					<div class="btn btn-light btn-rounded">Ler documentação</div>
+					<div class="btn btn-light btn-rounded"><a href="https://github.com/beautiful-sea/laravel-ramodnil/blob/master/README.md#laravel-ramodnil" target="_blank"> Ler documentação</a></div>
 				</div>
 			</div>
 		</div>

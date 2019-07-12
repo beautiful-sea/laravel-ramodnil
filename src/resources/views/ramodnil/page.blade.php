@@ -65,7 +65,7 @@
                                                 <span class="block">
                                                     Novo usuário cadastrado
                                                 </span>
-                                                <span class="time">5 minutes atrás</span> 
+                                                <span class="time">5 minutos atrás</span> 
                                             </div>
                                         </a>
                                     </div>
@@ -189,13 +189,6 @@
                     <div class="col-sm-6">
                         @yield('header-title')
                     </div>
-
-                    <!-- Breadcrumbs -->
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            @yield('header-breadcrumbs')
-                        </ol>
-                    </div>
                 </div>
             </div>
         </div>
@@ -205,7 +198,7 @@
     <!-- Footer -->
     <footer class="main-footer">
         <div class="text-right">
-            Versão 1.0.0
+            <!-- Texto do Footer -->
         </div>
     </footer>
 </div>
