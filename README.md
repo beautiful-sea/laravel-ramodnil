@@ -77,6 +77,11 @@ Ou, se você preferir que a compilação seja feita automaticamente toda vez que
 $ npm run watch
 ```
 
+Utilize o seginte comando para fazer a geração automática do autoload com as configurações de [Notificações](#notifications) através do comando:
+
+```sh
+$ composer dump-autoload
+```
 No seu arquivo de rotas *routes/web.php*, aponte o endereço raiz para a Home:
 
 **Antes:**
@@ -669,7 +674,7 @@ As notificações são exibidas a partir do arquivo localizado em *resources/vie
 @endforeach
 ```
 
-*@include('layouts.partials.notification.'.snake_case(class_basename($notification->type)))* tem a função de incluir o arquivo de exibição criado para cada tipo, esses arquivos estão localizados em *resources/views/layouts/partials/notification/*.
+```@include('layouts.partials.notification.'.snake_case(class_basename($notification->type)))``` tem a função de incluir o arquivo de exibição criado para cada tipo, esses arquivos estão localizados em *resources/views/layouts/partials/notification/*.
 
 Veja mais sobre Notificações na [documentação do Laravel](https://laravel.com/docs/notifications)
 
