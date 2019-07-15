@@ -52,8 +52,6 @@ $ php artisan ramodnil:install
 
 A instalação pode levar algum tempo, já que vários pacotes NPM serão baixados para seu projeto.
 
-Essa biblioteca não instala nem configura nenhum banco de dados no seu projeto. Você deve fazê-lo manualmente como faria com qualquer outro projeto recém-criado do Laravel.
-
 A instalação roda automaticamente o comando ``php artisan make:auth`` para gerar um sistema de Autenticação com algumas *migrations* já pré-configuradas para uma tabela de usuários, modificada para adicionar alguns campos a mais dos que já vêm na instalação padrão do Laravel.
 
 Após a instalação, você pode executar as migrations através do comando:
