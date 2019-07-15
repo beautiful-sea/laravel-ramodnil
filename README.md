@@ -1,7 +1,10 @@
 # Laravel Ramodnil
 
-Biblioteca para gerar um template padrão de um painel administrativo baseado em [Azzara](http://demo.themewagon.com/preview/free-bootstrap-4-html5-admin-dashboard-template-azzara). Já vem com algumas funções pré-definidas, como: controle de usuários, campos com máscara, etc.
+Biblioteca para gerar um template padrão de um painel administrativo responsivo baseado em [Azzara](http://demo.themewagon.com/preview/free-bootstrap-4-html5-admin-dashboard-template-azzara). Já vem com algumas funções pré-definidas, como: controle de usuários, campos com máscara, notificações etc.
 
+
+![alt text](https://i.imgur.com/XQhxByF.png)
+![alt text](https://i.imgur.com/ABh5J6m.png)
 ## Índice
 
 1. [Dependências](#dependencias)
